@@ -1,227 +1,238 @@
-
+/* RESET & BASE */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Remove margem padrão */
+  padding: 0; /* Remove padding padrão */
+  box-sizing: border-box; /* Inclui padding e border na largura e altura */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  outline: none;
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Define fontes padrão */
+  outline: none; /* Remove contorno padrão ao focar (use com cuidado para acessibilidade) */
 }
 
 body {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 16px;
+  background-color: black; /* Fundo preto para a página */
+  display: flex; /* Usa flexbox para layout */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  min-height: 100vh; /* Altura mínima igual a 100% da viewport */
+  padding: 16px; /* Espaçamento interno da página */
 }
 
 main.container {
-  width: 320px; /* largura fixa */
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  width: 320px; /* Largura fixa do container principal */
+  max-width: 100%; /* Máximo 100% para responsividade */
+  display: flex; /* Flexbox para layout */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 16px; /* Espaçamento entre os elementos filhos */
 }
+
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 16px;
+  display: flex; /* Flexbox para layout */
+  flex-direction: column; /* Organiza em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  gap: 16px; /* Espaçamento entre os filhos */
+  max-width: 320px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza horizontalmente na página */
+  padding: 16px; /* Espaçamento interno */
 }
 
 .titulo-principal {
-  color: #aec346; /* verde claro */
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 16px;
+  color: #aec346; /* Cor verde claro */
+  font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+  font-weight: 700; /* Negrito */
+  font-size: 36px; /* Tamanho da fonte */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 16px; /* Espaço abaixo do título */
 }
 
-img{
-  width: 150px; /* Ajuste para o tamanho desejado */
-  height: auto; /* Mantém proporção */
-  display: block; /* Evita espaçamentos indesejados */
-  margin: 0 auto; /* Centraliza horizontalmente (opcional) */
+img {
+  width: 150px; /* Largura fixa da imagem */
+  height: auto; /* Altura automática para manter proporção */
+  display: block; /* Remove espaçamento extra abaixo da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente */
 }
 
 p {
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1;
-  color: #ffffff;
-  width: 100%;
-  max-width: 299px;
-  opacity: 1;
-  text-align: center;
-  margin-bottom: 16px;
+  font-family: Roboto, sans-serif; /* Fonte Roboto */
+  font-weight: 400; /* Peso normal */
+  font-size: 32px; /* Tamanho da fonte */
+  line-height: 1; /* Altura da linha */
+  color: #ffffff; /* Cor branca */
+  width: 100%; /* Largura total do container */
+  max-width: 299px; /* Largura máxima */
+  opacity: 1; /* Opacidade total */
+  text-align: center; /* Centraliza texto */
+  margin-bottom: 16px; /* Espaço abaixo do parágrafo */
 }
 
 /* Container do input e label */
 .input-group {
-  position: relative;
-  width: 320px; /* largura fixa */
-  margin-bottom: 24px;
-  height: 64px; /* altura fixa para label flutuante */
-  padding-top: 20px;
-  box-sizing: border-box; /* para incluir padding na largura */
+  position: relative; /* Para posicionar label absoluto */
+  width: 320px; /* Largura fixa do grupo */
+  margin-bottom: 24px; /* Espaço abaixo do grupo */
+  height: 64px; /* Altura fixa para acomodar label flutuante */
+  padding-top: 20px; /* Espaço no topo para o label flutuante */
+  box-sizing: border-box; /* Inclui padding e borda na largura */
 }
 
 /* Input com largura 100% do container */
 .input-group input {
-  width: 100%;
-  height: 48px;
-  padding: 16px 12px 12px 12px;
-  font-size: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.25);
-  color: #555555;
-  outline: none;
-  transition: border-color 0.3s, color 0.3s;
-  box-sizing: border-box;
+  width: 100%; /* Largura total do container pai */
+  height: 48px; /* Altura fixa do input */
+  padding: 16px 12px 12px 12px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda translúcida */
+  border-radius: 4px; /* Bordas arredondadas */
+  background: rgba(255, 255, 255, 0.25); /* Fundo branco translúcido */
+  color: #555555; /* Cor do texto padrão */
+  outline: none; /* Remove contorno padrão */
+  transition: border-color 0.3s, color 0.3s; /* Transição suave para borda e cor */
+  box-sizing: border-box; /* Inclui padding e borda na largura */
 }
 
 /* Placeholder invisível para ativar :placeholder-shown */
 .input-group input::placeholder {
-  color: transparent;
+  color: transparent; /* Torna o placeholder invisível */
 }
-
-
 
 .input-group label {
-  position: absolute;
-  top: 16px;
-  left: 12px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  pointer-events: none;
-  transition: all 0.3s ease;
+  position: absolute; /* Posiciona o label em relação ao pai */
+  top: 16px; /* Distância do topo */
+  left: 12px; /* Distância da esquerda */
+  color: rgba(255, 255, 255, 0.7); /* Cor branca translúcida */
+  font-size: 16px; /* Tamanho da fonte */
+  pointer-events: none; /* Label não interage com mouse */
+  transition: all 0.3s ease; /* Transição suave */
 }
 
+/* Quando o input está focado ou preenchido, label "flutua" para cima */
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
-  top: 6px; /* label flutuante */
-  font-size: 12px;
-  color: #aec346;
+  top: 6px; /* Move para cima */
+  font-size: 12px; /* Diminui a fonte */
+  color: #aec346; /* Muda a cor para verde claro */
 }
 
-/* Validação */
+/* Validação: input inválido */
 .input-group input.invalid {
-  border-color: #ff4d4d;
+  border-color: #ff4d4d; /* Borda vermelha */
 }
 
+/* Validação: input válido */
 .input-group input.valid {
-  border-color: #aec346;
+  border-color: #aec346; /* Borda verde */
 }
 
+/* Mensagem de erro */
 .error-message {
-  color: #ff4d4d;
-  font-size: 12px;
-  margin-top: 4px;
-  min-height: 16px;
+  color: #ff4d4d; /* Vermelho para erro */
+  font-size: 12px; /* Fonte pequena */
+  margin-top: 4px; /* Espaço acima da mensagem */
+  min-height: 16px; /* Altura mínima para evitar salto */
 }
 
-/* Botão */
+/* Botão Sortear */
 button#botaoGerar {
-  background: #aec346;
-  border-radius: 5px;
-  width: 100%;
-  border: none;
-  height: 48px;
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  background: #aec346; /* Fundo verde claro */
+  border-radius: 5px; /* Bordas arredondadas */
+  width: 100%; /* Largura total do container pai */
+  border: none; /* Sem borda padrão */
+  height: 48px; /* Altura fixa */
+  color: white; /* Texto branco */
+  font-size: 18px; /* Tamanho da fonte */
+  font-weight: 700; /* Negrito */
+  cursor: pointer; /* Cursor pointer ao passar */
+  transition: background-color 0.3s ease; /* Transição suave */
   opacity: 1;
 }
 
+/* Hover no botão (quando não desabilitado) */
 button#botaoGerar:hover:not(:disabled) {
-  background-color: #028a2f;
+  background-color: #028a2f; /* Verde mais escuro */
   opacity: 1;
 }
 
+/* Ativo (clicado) no botão (quando não desabilitado) */
 button#botaoGerar:active:not(:disabled) {
-  background-color: #016622;
+  background-color: #016622; /* Verde ainda mais escuro */
   opacity: 1;
 }
 
+/* Botão desabilitado */
 button#botaoGerar:disabled {
-  background-color: #7a8a3f;
-  cursor: not-allowed;
+  background-color: #7a8a3f; /* Verde acinzentado */
+  cursor: not-allowed; /* Cursor proibido */
 }
 
-/* Modal */
+/* Modal de resultado */
 .modal {
-  position: fixed;
+  position: fixed; /* Fixa na tela */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  width: 100%; /* Ocupa toda a largura */
+  height: 100%; /* Ocupa toda a altura */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo preto translúcido */
+  display: flex; /* Flexbox para centralizar */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  z-index: 1000; /* Sobreposto a outros elementos */
 }
 
+/* Classe para esconder o modal */
 .hidden {
   display: none;
 }
 
+/* Conteúdo interno do modal */
 .modal-content {
-  background-color: #222;
-  padding: 30px 40px;
-  border-radius: 10px;
-  text-align: center;
-  color: #aec346;
-  min-width: 280px;
-  box-shadow: 0 0 15px #aec346;
-  position: relative;
+  background-color: #222; /* Fundo escuro */
+  padding: 30px 40px; /* Espaçamento interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza texto */
+  color: #aec346; /* Texto verde claro */
+  min-width: 280px; /* Largura mínima */
+  box-shadow: 0 0 15px #aec346; /* Sombra verde */
+  position: relative; /* Para posicionar o botão fechar */
 }
 
+/* Margem do título dentro do modal */
 .modal-content h2 {
   margin-bottom: 20px;
 }
 
+/* Estilo para o número sorteado */
 .numero-sorteado {
-  font-size: 72px;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: 4px;
+  font-size: 72px; /* Muito grande */
+  font-weight: 900; /* Muito negrito */
+  color: #ffffff; /* Branco */
+  letter-spacing: 4px; /* Espaçamento entre letras */
 }
 
+/* Botão fechar modal */
 .fechar {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  color: #aec346;
-  cursor: pointer;
-  user-select: none;
-  border: none;
-  background: transparent;
-  transition: color 0.3s ease;
+  position: absolute; /* Posicionado em relação ao modal-content */
+  top: 10px; /* Distância do topo */
+  right: 15px; /* Distância da direita */
+  font-size: 28px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #aec346; /* Verde claro */
+  cursor: pointer; /* Cursor pointer */
+  user-select: none; /* Impede seleção do botão */
+  border: none; /* Sem borda */
+  background: transparent; /* Fundo transparente */
+  transition: color 0.3s ease; /* Transição suave na cor */
 }
 
+/* Cor do botão fechar ao passar mouse */
 .fechar:hover {
-  color: #028a2f;
+  color: #028a2f; /* Verde escuro */
 }
 
-/* Responsividade */
+/* Responsividade para telas pequenas */
 @media (max-width: 400px) {
   main.container {
-    width: 100%;
-    padding: 0 12px;
+    width: 100%; /* Usa toda a largura disponível */
+    padding: 0 12px; /* Espaçamento lateral */
   }
 }

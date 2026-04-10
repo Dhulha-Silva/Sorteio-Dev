@@ -1,52 +1,52 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html> <!-- Declara o tipo do documento como HTML5 -->
+<html lang="pt-br"> <!-- Elemento raiz do documento; idioma definido como português do Brasil -->
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevSorteio</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Garante compatibilidade com o IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura viewport para responsividade -->
+    <title>DevSorteio</title> <!-- Título da página, aparece na aba do navegador -->
+    <link rel="stylesheet" href="./styles.css" /> <!-- Importa arquivo CSS externo para estilos -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Otimização para carregar fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet" /> <!-- Importa a fonte Roboto do Google Fonts -->
 </head>
 
 <body>
-    <main class="container" role="main">
-        <h1 class="titulo-principal">DevSorteio</h1>
-        <img src="./dados-4.gif" alt="Logo DevSorteio" />
-        <p class="p">Sortear um número</p>
+    <main class="container" role="main"> <!-- Conteúdo principal da página, com classe para estilo e role para acessibilidade -->
+        <h1 class="titulo-principal">DevSorteio</h1> <!-- Título principal da página -->
+        <img src="./dados-4.gif" alt="Logo DevSorteio" /> <!-- Imagem GIF animada do dado com texto alternativo -->
+        <p class="p">Sortear um número</p> <!-- Parágrafo explicativo -->
 
-        <form id="formSorteio" novalidate>
-            <div class="input-group">
+        <form id="formSorteio" novalidate> <!-- Formulário para entrada dos dados, com id para JS e desabilita validação padrão -->
+            <div class="input-group"> <!-- Grupo para o campo mínimo e seu label -->
                 <input id="inputMin" name="inputMin" type="number" required aria-describedby="errorMin"
-                    placeholder=" " />
-                <label for="inputMin">Número mínimo</label>
-                <span id="errorMin" class="error-message" aria-live="polite"></span>
+                    placeholder=" " /> <!-- Input númerico para valor mínimo, associado ao erro pelo aria-describedby -->
+                <label for="inputMin">Número mínimo</label> <!-- Label associado ao input mínimo -->
+                <span id="errorMin" class="error-message" aria-live="polite"></span> <!-- Espaço para mensagem de erro acessível -->
             </div>
 
-            <div class="input-group">
+            <div class="input-group"> <!-- Grupo para o campo máximo e seu label -->
                 <input id="inputMax" name="inputMax" type="number" required aria-describedby="errorMax"
-                    placeholder=" " />
-                <label for="inputMax">Número máximo</label>
-                <span id="errorMax" class="error-message" aria-live="polite"></span>
+                    placeholder=" " /> <!-- Input númerico para valor máximo, associado ao erro pelo aria-describedby -->
+                <label for="inputMax">Número máximo</label> <!-- Label associado ao input máximo -->
+                <span id="errorMax" class="error-message" aria-live="polite"></span> <!-- Espaço para mensagem de erro acessível -->
             </div>
 
-            <button id="botaoGerar" type="submit">Sortear</button>
+            <button id="botaoGerar" type="submit">Sortear</button> <!-- Botão para enviar o formulário e iniciar o sorteio -->
         </form>
     </main>
 
     <!-- Modal para resultado -->
-    <div id="modalResultado" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
-        <div class="modal-content">
-            <button id="fecharModal" class="fechar" aria-label="Fechar modal">&times;</button>
-            <h2 id="tituloModal">Número sorteado:</h2>
-            <div id="numeroSorteado" class="numero-sorteado" aria-live="polite" aria-atomic="true"></div>
+    <div id="modalResultado" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="tituloModal"> <!-- Janela modal oculta inicialmente para mostrar o número sorteado -->
+        <div class="modal-content"> <!-- Conteúdo interno do modal -->
+            <button id="fecharModal" class="fechar" aria-label="Fechar modal">&times;</button> <!-- Botão para fechar o modal -->
+            <h2 id="tituloModal">Número sorteado:</h2> <!-- Título do modal -->
+            <div id="numeroSorteado" class="numero-sorteado" aria-live="polite" aria-atomic="true"></div> <!-- Área onde o número sorteado será exibido -->
         </div>
     </div>
 
-    <script src="./JavaScript.js"></script>
+    <script src="./JavaScript.js"></script> <!-- Importa o arquivo JavaScript que contém a lógica da página -->
 </body>
 
 </html>
