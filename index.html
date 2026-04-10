@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevSorteio</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <main class="container" role="main">
+        <h1 class="titulo-principal">DevSorteio</h1>
+        <img src="./dados-4.gif" alt="Logo DevSorteio" />
+        <p class="p">Sortear um número</p>
+
+        <form id="formSorteio" novalidate>
+            <div class="input-group">
+                <input id="inputMin" name="inputMin" type="number" required aria-describedby="errorMin"
+                    placeholder=" " />
+                <label for="inputMin">Número mínimo</label>
+                <span id="errorMin" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="input-group">
+                <input id="inputMax" name="inputMax" type="number" required aria-describedby="errorMax"
+                    placeholder=" " />
+                <label for="inputMax">Número máximo</label>
+                <span id="errorMax" class="error-message" aria-live="polite"></span>
+            </div>
+
+            <button id="botaoGerar" type="submit">Sortear</button>
+        </form>
+    </main>
+
+    <!-- Modal para resultado -->
+    <div id="modalResultado" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+        <div class="modal-content">
+            <button id="fecharModal" class="fechar" aria-label="Fechar modal">&times;</button>
+            <h2 id="tituloModal">Número sorteado:</h2>
+            <div id="numeroSorteado" class="numero-sorteado" aria-live="polite" aria-atomic="true"></div>
+        </div>
+    </div>
+
+    <script src="./JavaScript.js"></script>
+</body>
+
+</html>
